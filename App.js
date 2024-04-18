@@ -3,12 +3,15 @@ import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import Ionicons from '@expo/vector-icons/Ionicons';
 import HomeScreen from './src/screens/HomeScreen/Index';
+import DestinationSearch from './src/screens/DestinationSearch/Index';
+
 
 export default function App() {
   return (
     <View>
       <StatusBar style="auto" />
-      <HomeScreen/>
+      {/* <HomeScreen/> */}
+      <DestinationSearch/>
     </View>
   );
 }
