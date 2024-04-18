@@ -3,12 +3,15 @@ import { StyleSheet, TextInput } from "react-native";
 const styles = StyleSheet.create({
   container: {
     padding: 10,
-    marginVertical: 5
+    marginVertical: 5,
+    backgroundColor: '#eee',
+    height: '100%'
   },
   textInput: {
     height: 50,
-    backgroundColor: "#b3b3b3",
-    marginVertical: 5
+    backgroundColor: "#ffffff",
+    marginVertical: 5,
+    padding: 5
   },
 });
 
