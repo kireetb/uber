@@ -4,14 +4,16 @@ import { StyleSheet, Text, View } from 'react-native';
 import Ionicons from '@expo/vector-icons/Ionicons';
 import HomeScreen from './src/screens/HomeScreen/Index';
 import DestinationSearch from './src/screens/DestinationSearch/Index';
+import SearchResults from './src/screens/SearchResults/Index';
 
 
 export default function App() {
   return (
     <View>
       <StatusBar style="auto" />
-      {/* <HomeScreen/> */}
-      <DestinationSearch/>
+      {/* <HomeScreen/> ## This has been built, just commented to test other components, however, not tied with other components*/ } 
+      {/* <DestinationSearch/> ## This has been built, just commented to test other components, however, not tied with other components*/}
+      <SearchResults/>
     </View>
   );
 }
