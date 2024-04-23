@@ -5,19 +5,21 @@ import Ionicons from "@expo/vector-icons/Ionicons";
 
 function UberTypeRow(props) {
   const { type } = props;
+  
 
   function getImage() {
-    if (type.type ==='UberX'){
-      return require('../../assets/images/UberX.jpeg')
+    if (type.type === "UberX") {
+      return require("../../assets/images/UberX.jpeg");
+    }
+
+    if (type.type === "Comfort") {
+      return require("../../assets/images/Comfort.jpeg");
+    }
+
+    if (type.type === "UberXL") {
+      return require("../../assets/images/UberXL.jpeg");
     }
     
-    if (type.type ==='Comfort'){
-      return require('../../assets/images/Comfort.jpeg')
-    }
-    
-    if (type.type ==='UberXL'){
-      return require('../../assets/images/UberXL.jpeg')
-    }
   }
   return (
     <View style={styles.container}>

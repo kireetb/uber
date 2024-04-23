@@ -5,7 +5,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
-    padding: 20,
+    padding: 10,
   },
   image: { height: 50, width: 50, resizeMode: "contain" },
   middleContainer: { flex: 1, padding: 10 },
