@@ -33,6 +33,7 @@ function HomeMap() {
       {cars.map((car) => (
         <Marker
           coordinate={{ latitude: car.latitude, longitude: car.longitude }}
+          key={car.id} // This is to avoid the warning 'each child in the list should have a unique key prop'
         >
           <Image
             style={{ height: 50, width: 50, resizeMode: "contain" }}
