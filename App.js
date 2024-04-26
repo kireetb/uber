@@ -12,10 +12,18 @@ export default function App() {
   return (
     <View>
       <StatusBar style="auto" />
+      
+      
       {/* ## This has been built, just commented to test other components, however, not tied with other components */}
       {/* <HomeScreen/>  */}
-      {/* <DestinationSearch/> ## This has been built, just commented to test other components, however, not tied with other components*/}
-      <SearchResults/>  
+      
+      
+      {/* ## This has been built, just commented to test other components, however, not tied with other components */}
+      <DestinationSearch/>
+      
+      
+      {/* ## This has been built, just commented to test other components, however, not tied with other components */}
+      {/* <SearchResults/>   */}
     </View>
   );
 }

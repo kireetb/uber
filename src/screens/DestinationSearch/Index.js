@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { View, Text, TextInput, SafeAreaView } from "react-native";
 import { GooglePlacesAutocomplete } from "react-native-google-places-autocomplete";
 import styles from "./Styles";
+import PlaceRow from "./PlaceRow";
 
 function DestinationSearch() {
   const [destinationDetails, setDestinationDetails] = useState();
@@ -16,9 +17,18 @@ function DestinationSearch() {
 
   return (
     <SafeAreaView>
-      <View style={styles.container}>
+      <View style={styles.initContainer}>
+        {/* ## This block takes in input for the source */}
         <GooglePlacesAutocomplete
-          styles={{ textInput: styles.textInput }}
+          suppressDefaultStyles
+          styles={{
+            textInput: styles.textInput,
+            container: { position: "absolute", top: 20, left: 10, right: 10 },
+            listView: {
+              position: "absolute",
+              top: 115,
+            },
+          }}
           placeholder="From"
           onPress={(data, details = null) => {
             setSourceDetails({ data, details });
@@ -29,9 +39,17 @@ function DestinationSearch() {
             key: "AIzaSyDoNKeY4ZDwL7Z0W93wDMha9MwXyoBKsVg",
             language: "en",
           }}
+          renderRow={(data) => <PlaceRow data={data} />}
+          enablePoweredByContainer={false}
         />
+
+        {/* ## This block takes in input for the destination */}
         <GooglePlacesAutocomplete
-          styles={{ textInput: styles.textInput }}
+        suppressDefaultStyles
+          styles={{
+            textInput: styles.textInput,
+            container: { position: "absolute", top: 75, left: 10, right: 10 },
+          }}
           placeholder="Where To?"
           onPress={(data, details = null) => {
             setDestinationDetails({ data, details });
@@ -42,6 +60,8 @@ function DestinationSearch() {
             key: "AIzaSyDoNKeY4ZDwL7Z0W93wDMha9MwXyoBKsVg",
             language: "en",
           }}
+          renderRow={(data) => <PlaceRow data={data} />}
+          enablePoweredByContainer={false}
         />
       </View>
     </SafeAreaView>

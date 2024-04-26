@@ -36,12 +36,11 @@ function HomeMap() {
           key={car.id} // This is to avoid the warning 'each child in the list should have a unique key prop'
         >
           <Image
-            style={{ height: 50, width: 50, resizeMode: "contain" }}
+            style={{ height: 50, width: 50, resizeMode: "contain", transform: [{rotate:`${car.heading}deg`}] }}
             source={getImage(car.type)}
           />
         </Marker>
       ))}
-
     </MapView>
   );
 }
