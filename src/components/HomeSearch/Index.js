@@ -9,6 +9,7 @@ import FontAwesome from "@expo/vector-icons/FontAwesome"
 function HomeSearch() {
   return (
     <View>
+
       {/* input box */}
       <View style={styles.inputBox}>
         <Text>Where To?</Text>

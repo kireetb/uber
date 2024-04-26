@@ -11,7 +11,7 @@ function UberTypes() {
   }
 
   return (
-    <View>
+    <View style={styles.container}>
       {typesData.map((type) => (
         <UberTypeRow type={type} key={type.id} />
       ))}
