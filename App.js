@@ -2,10 +2,7 @@ import { StatusBar } from "expo-status-bar";
 import React, { useState, useEffect } from "react";
 import { StyleSheet, Text, View } from "react-native";
 import Ionicons from "@expo/vector-icons/Ionicons";
-import HomeScreen from "./src/screens/HomeScreen/Index";
-import DestinationSearch from "./src/screens/DestinationSearch/Index";
-import SearchResults from "./src/screens/SearchResults/Index";
-import RouteMap from "./src/components/RouteMap/Index";
+import Router from './src/navigation/root'
 import * as Location from "expo-location";
 
 export default function App() {
@@ -40,13 +37,15 @@ export default function App() {
       <StatusBar style="auto" />
 
       {/* ## This has been built, just commented to test other components, however, not tied with other components */}
-      <HomeScreen/> 
+      {/* <HomeScreen/>  */}
 
       {/* ## This has been built, just commented to test other components, however, not tied with other components */}
       {/* <DestinationSearch /> */}
 
       {/* ## This has been built, just commented to test other components, however, not tied with other components */}
       {/* <SearchResults/>   */}
+
+      <Router/>
     </View>
   );
 }
