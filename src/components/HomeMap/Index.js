@@ -23,6 +23,7 @@ function HomeMap() {
     <MapView
       provider={PROVIDER_GOOGLE} // remove if not using Google Maps
       style={{ height: "100%", width: "100%" }}
+      showsUserLocation={true}
       region={{
         latitude: 28.450627,
         longitude: -16.263045,

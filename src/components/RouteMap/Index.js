@@ -11,6 +11,7 @@ function RouteMap() {
     <MapView
       provider={PROVIDER_GOOGLE} // remove if not using Google Maps
       style={{ height: "100%", width: "100%" }}
+      showsUserLocation={true}
       region={{
         latitude: 37.3318456,
         longitude: -122.0296002,
