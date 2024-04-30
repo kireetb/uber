@@ -3,8 +3,14 @@
     "name": "uber",
     "slug": "uber",
     "version": "1.0.0",
-    "assetBundlePatterns": [
-      "**/*"
+    "assetBundlePatterns": ["**/*"],
+    "plugins": [
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "Allow uber to use your location."
+        }
+      ]
     ]
   }
 }

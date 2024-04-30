@@ -1,12 +1,16 @@
 import React from "react";
 import { View, Text, SafeAreaView } from "react-native";
-import HomeMap from "../../components/HomeMap/Index";
 import UberTypes from "../../components/UberTypes/Index";
+import RouteMap from "../../components/RouteMap/Index";
 
-function SearchResults() {
+import { useRoute } from "@react-navigation/native";
+
+function SearchResults({ props }) {
+  const route = useRoute();
+  // console.log(route.params);
   return (
     <View>
-      <HomeMap />
+      <RouteMap origin={route.params.sourceDetails.details.geometry.location} destination={route.params.destinationDetails.details.geometry.location}/>
       <UberTypes />
     </View>
   );
