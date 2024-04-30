@@ -5,6 +5,8 @@ import styles from "./Styles";
 import PlaceRow from "./PlaceRow";
 import * as Location from "expo-location";
 
+import { useNavigation } from "@react-navigation/native";
+
 const homePlace = {
   description: 'Home',
   geometry: { location: { lat: 48.8152937, lng: 2.4597668 } },
@@ -16,17 +18,17 @@ const workPlace = {
 
 
 function DestinationSearch() {
+  const navigation = useNavigation();
   const [destinationDetails, setDestinationDetails] = useState();
   const [sourceDetails, setSourceDetails] = useState();
 
   Location.installWebGeolocationPolyfill();
 
   useEffect(() => {
-    console.warn("useEffect is called");
     if (sourceDetails && destinationDetails) {
-      console.warn("Redirect to new navigation");
+      navigation.navigate('SearchResults', {sourceDetails, destinationDetails});
     }
-  }, []);
+  }, [sourceDetails, destinationDetails]);
 
   return (
     <SafeAreaView>
@@ -47,7 +49,7 @@ function DestinationSearch() {
           placeholder="From"
           onPress={(data, details = null) => {
             setSourceDetails({ data, details });
-            console.log(details.geometry.location);
+            // console.log(details.geometry.location);
           }}
           fetchDetails
           query={{
@@ -70,7 +72,7 @@ function DestinationSearch() {
           placeholder="Where To?"
           onPress={(data, details = null) => {
             setDestinationDetails({ data, details });
-            console.log(details.geometry.location);
+            // console.log(details.geometry.location);
           }}
           fetchDetails
           query={{

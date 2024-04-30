@@ -3,22 +3,14 @@ import { View, Text, Dimensions } from "react-native";
 import HomeMap from "../../components/HomeMap/Index";
 import CovidMessage from "../../components/CovidMessage/Index";
 import HomeSearch from "../../components/HomeSearch/Index";
+import styles from "./Styles";
 
 function HomeScreen() {
   return (
     <View>
       <HomeMap />
 
-      
-      <View
-        style={{
-          position: "absolute",
-          left: 0,
-          right: 0,
-          bottom: 0,
-          backgroundColor: "white",
-        }}
-      >
+      <View style={styles.container}>
         {/* Covid component */}
         <CovidMessage />
 
