@@ -4,6 +4,7 @@ import { StyleSheet, Text, View } from "react-native";
 import Ionicons from "@expo/vector-icons/Ionicons";
 import Router from "./src/navigation/root";
 import * as Location from "expo-location";
+import "react-native-gesture-handler";
 
 export default function App() {
   // const [location, setLocation] = useState(null);
