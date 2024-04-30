@@ -1,8 +1,9 @@
 import React from "react";
-import { View, Text, SafeAreaView } from "react-native";
+import { View, Text } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createDrawerNavigator } from "@react-navigation/drawer";
 import HomeNavigator from "./home";
+import CustomDrawer from "./CustomDrawer";
 
 const Drawer = createDrawerNavigator();
 
@@ -17,7 +18,10 @@ const DummyScreen = (props) => {
 function RootNavigator(props) {
   return (
     <NavigationContainer>
-      <Drawer.Navigator screenOptions={{ headerShown: false }}>
+      <Drawer.Navigator
+        screenOptions={{ headerShown: false }}
+        drawerContent={(props) => <CustomDrawer {...props} />}
+      >
         <Drawer.Screen name="Home" component={HomeNavigator} />
 
         <Drawer.Screen name="Your Trips">
