@@ -5,12 +5,14 @@ import RouteMap from "../../components/RouteMap/Index";
 
 import { useRoute } from "@react-navigation/native";
 
-function SearchResults({ props }) {
+function SearchResults(props) {
   const route = useRoute();
-  // console.log(route.params);
+  const originPlace = route.params.sourceDetails.details.geometry.location
+  const destinationPlace = route.params.destinationDetails.details.geometry.location
+
   return (
     <View>
-      <RouteMap origin={route.params.sourceDetails.details.geometry.location} destination={route.params.destinationDetails.details.geometry.location}/>
+      <RouteMap origin={originPlace} destination={destinationPlace}/>
       <UberTypes />
     </View>
   );

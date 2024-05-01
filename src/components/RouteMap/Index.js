@@ -14,8 +14,8 @@ function RouteMap(props) {
       style={{ height: "100%", width: "100%" }}
       showsUserLocation={true}
       region={{
-        latitude: props.origin.lat,
-        longitude: props.origin.lng,
+        latitude: origin.latitude,
+        longitude: origin.longitude,
         latitudeDelta: 0.015,
         longitudeDelta: 0.0121,
       }}
