@@ -53,7 +53,7 @@ function DestinationSearch() {
           }}
           fetchDetails
           query={{
-            key: "AIzaSyDoNKeY4ZDwL7Z0W93wDMha9MwXyoBKsVg",
+            key: "<Google API key>",
             language: "en",
           }}
           renderRow={(data) => <PlaceRow data={data} />}
@@ -76,7 +76,7 @@ function DestinationSearch() {
           }}
           fetchDetails
           query={{
-            key: "AIzaSyDoNKeY4ZDwL7Z0W93wDMha9MwXyoBKsVg",
+            key: "<Google API key>",
             language: "en",
           }}
           renderRow={(data) => <PlaceRow data={data} />}
